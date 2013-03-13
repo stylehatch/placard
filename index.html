@@ -67,27 +67,15 @@
 	    StyleHatch.demoSiteURL = "http://cadence.stylehatch.co";
 	    StyleHatch.supportURL = "mailto:cadence@stylehatch.co";
 
-	    var placardCSS = 'css/placard.min.css';
-	    var placardJS = 'js/placard.min.js';
-	    
-	    // Load CSS
-	    $.ajax({
-		    url: placardCSS,
-		    dataType: 'text',
-		    success: function(data) {
-		    	//console.log(data); //data returned
-		        $('<style type="text/css">\n' + data + '</style>').appendTo("head");
+	    StyleHatch.placardJS = "js/placard.min.js";
+	    StyleHatch.placardCSS = "css/placard.min.css";
 
-		        // Load JS
-		        $.getScript(placardJS, function(data) {
-		           // console.log(data); //data returned
-		           
-		           // Load the placard
-		           StyleHatch.loadPlacard();
-		        });         
-		    }                  
-		});
-
+	    (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = StyleHatch.placardJS;
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
 		
 	</script>
 
