@@ -61,7 +61,35 @@
 		</footer>
 	</div>
 
+	<script type="text/javascript">
+		var StyleHatch = window.StyleHatch || {};
+	    StyleHatch.themeName = "Cadence";
+	    StyleHatch.demoSiteURL = "http://cadence.stylehatch.co";
+	    StyleHatch.supportURL = "mailto:cadence@stylehatch.co";
 
+	    var placardCSS = 'css/placard.min.css';
+	    var placardJS = 'js/placard.min.js';
+	    
+	    // Load CSS
+	    $.ajax({
+		    url: placardCSS,
+		    dataType: 'text',
+		    success: function(data) {
+		    	//console.log(data); //data returned
+		        $('<style type="text/css">\n' + data + '</style>').appendTo("head");
+
+		        // Load JS
+		        $.getScript(placardJS, function(data) {
+		           // console.log(data); //data returned
+		           
+		           // Load the placard
+		           StyleHatch.loadPlacard();
+		        });         
+		    }                  
+		});
+
+		
+	</script>
 
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
