@@ -30,7 +30,19 @@ function loadPlacard(){
 
   return true;
 }
-
 StyleHatch.loadPlacard = loadPlacard;
+
+// Load CSS
+$.ajax({
+  url: StyleHatch.placardCSS,
+  dataType: 'text',
+  success: function(data) {
+    //console.log(data); //data returned
+    $('<style type="text/css">\n' + data + '</style>').appendTo("head");
+
+    StyleHatch.loadPlacard();
+  }
+});
+
 
 })( window );
