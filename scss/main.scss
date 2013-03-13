@@ -31,7 +31,7 @@ p {
 }
 
 body {
-  background: $darkBlue url(../img/bg-wood-texture.jpg) 0 0 repeat;
+  background: $darkBlue url(../img/bg-wood-texture.jpg) 0 0 repeat fixed;
   font-family: $bodyFont;
   color: $black;
   margin: 0 1em;

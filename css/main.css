@@ -235,7 +235,7 @@ p {
   margin-top: 0; }
 
 body {
-  background: #293037 url(../img/bg-wood-texture.jpg) 0 0 repeat;
+  background: #293037 url(../img/bg-wood-texture.jpg) 0 0 repeat fixed;
   font-family: "locator-web", sans-serif;
   color: #252b31;
   margin: 0 1em; }
