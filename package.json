@@ -1,0 +1,22 @@
+{
+  "name": "placard",
+  "version": "0.9.0",
+  "description": "Display details on a website as a fixed overlay bar and modal window",
+  "author": "Jonathan Moore, @moore - Style Hatch",
+  "repository": {
+  	"type": "git",
+  	"url": "git://github.com/stylehatch/placard",
+    "docs": "http://stylehatch.github.com/placard/"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-watch": "~0.3.1",
+    "grunt-contrib-uglify": "~0.1.2",
+    "grunt-contrib-livereload": "~0.1.2",
+    "grunt-contrib-connect": "~0.1.2",
+    "grunt-contrib-sass": "latest",
+    "grunt-regarde": "latest",
+    "grunt-open": "latest"
+  }
+}
