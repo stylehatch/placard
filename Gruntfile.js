@@ -84,10 +84,10 @@ module.exports = function(grunt) {
     sass: {
       placard: {
         options: {
-          style: 'nested'
+          style: 'compressed'
         },
         files: {
-          'css/placard.css': ['scss/placard.scss']
+          'css/placard.min.css': ['scss/placard.scss']
         }
       },
       pages: {
